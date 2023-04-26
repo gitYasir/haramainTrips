@@ -8,7 +8,7 @@ export default function Home() {
         <title>Haramain Trips</title>
         <meta name="description" content="An Umrah Company Like No Other" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/HaramainTripsLogoV1.ico" />
+        <link rel="icon" href="/HaramainTripsLogoV1.png" />
       </Head>
       <main className={styles.main}>
         <h1>Coming Soon...</h1>
