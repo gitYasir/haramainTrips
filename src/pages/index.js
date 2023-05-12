@@ -1,5 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+import Subscribe from "../../Components/Subscribe/Subscribe";
+import HomePage from "../../Components/Home/HomePage";
 
 export default function Home() {
   return (
@@ -10,8 +12,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/HaramainTripsLogoV1.png" />
       </Head>
-      <main className={styles.main}>
-        <h1>Coming Soon...</h1>
+      <main>
+        <HomePage />
+        <Subscribe />
       </main>
     </>
   );

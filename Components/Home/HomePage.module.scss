@@ -1,0 +1,30 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  .subContainer {
+    position: relative;
+    background-image: url("/images/ryan-pradipta-putra-MWJ7JpFBlGk-unsplash.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media only screen and (max-width: 768px) {
+      background-size: cover;
+    }
+  }
+  h1,
+  h3 {
+    text-align: center;
+  }
+  .para {
+    padding: 0 20px;
+  }
+}
