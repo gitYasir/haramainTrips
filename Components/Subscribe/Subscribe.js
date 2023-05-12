@@ -67,6 +67,7 @@ function Subscribe() {
             name="_next"
             value="http://haramaintrips.com/thankyou"
           ></input>
+          <input type="text" name="_honey" className={styles.hide}></input>
           <input type="hidden" name="_captcha" value="false"></input>
           <button className={styles.submit}>Submit</button>
         </form>

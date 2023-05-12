@@ -96,3 +96,7 @@
   line-height: 15px;
   color: #ffffff;
 }
+
+.hide {
+  display: none;
+}
