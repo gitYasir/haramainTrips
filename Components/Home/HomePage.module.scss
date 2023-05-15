@@ -9,7 +9,7 @@
   margin: 0;
   .subContainer {
     position: relative;
-    background-image: url("/images/ryan-pradipta-putra-MWJ7JpFBlGk-unsplash.jpg");
+    // background-image: url("/images/ryan-pradipta-putra-MWJ7JpFBlGk-unsplash.jpg");
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -26,5 +26,24 @@
   }
   .para {
     padding: 0 20px;
+  }
+}
+.media {
+  @media (max-width: 790px) {
+    min-height: 300;
+    max-height: 300;
+  }
+}
+.content {
+  @media (max-width: 790px) {
+    min-height: 230;
+    max-height: 230;
+  }
+}
+.actions {
+  @media (max-width: 790px) {
+    min-height: 50;
+    max-height: 50;
+    justify-content: center;
   }
 }

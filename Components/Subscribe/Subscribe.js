@@ -1,5 +1,17 @@
+import { Box, Link, Typography } from "@mui/material";
 import styles from "./Subscribe.module.css";
-
+function Copyright() {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center">
+      {"Copyright © "}
+      <Link color="inherit" href="/">
+        Haramain Trips
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 function Subscribe() {
   return (
     <div className={styles.container}>
@@ -72,6 +84,9 @@ function Subscribe() {
           <button className={styles.submit}>Submit</button>
         </form>
       </div>
+      <Box sx={{ bgcolor: "transparent", pt: 15 }} component="footer">
+        <Copyright />
+      </Box>
     </div>
   );
 }
