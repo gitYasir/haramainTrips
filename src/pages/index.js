@@ -1,7 +1,7 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
 import Subscribe from "../../Components/Subscribe/Subscribe";
 import HomePage from "../../Components/Home/HomePage";
+import NavBar from "../../Components/NavBar/NavBar";
 
 export default function Home() {
   return (

@@ -1,0 +1,117 @@
+@mixin disFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar {
+  @include disFlex;
+  z-index: 2;
+  justify-content: space-between;
+  position: fixed;
+  background-color: white;
+  color: white;
+  width: 100%;
+  background-color: transparent;
+  // margin: -43px;
+
+  // @media (max-width: 790px) {
+  //   margin: -23px;
+  // }
+
+  .logoArea {
+    position: relative;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    .myLogo {
+      border-radius: 50%;
+    }
+  }
+  .span {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    span {
+      height: 3px;
+      width: 100%;
+      background-color: black;
+      border-radius: 10px;
+    }
+  }
+  .menu {
+    height: 100%;
+    ul {
+      @include disFlex;
+      margin: 0;
+      padding-right: 50px;
+      li {
+        list-style: none;
+        font-size: 20px;
+        a {
+          display: block;
+          text-decoration: none;
+          color: white;
+          padding: 1rem;
+          border-radius: 5%;
+          &:hover {
+            background-color: rgb(74, 190, 237);
+            color: gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+    .span {
+      display: flex;
+      margin: 10px 20px 0 0;
+    }
+  }
+  .menu {
+    display: none;
+    width: 100%;
+    ul {
+      width: 100%;
+      flex-direction: column;
+      li {
+        text-align: center;
+        width: 100%;
+        transition-delay: 0.2s;
+        a {
+          padding: 0.5rem 1rem;
+          &:hover {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+  .active {
+    display: flex;
+  }
+  .cross {
+    transform: rotate(180deg);
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 4px);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -7px);
+    }
+  }
+}
