@@ -13,6 +13,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import cards from "../../Data/data";
 import NavBar from "../NavBar/NavBar";
+import Image from "next/image";
 
 const theme = createTheme();
 
@@ -88,12 +89,11 @@ export default function Album() {
                     flexDirection: "column",
                   }}
                 >
-                  <CardMedia
-                    component="img"
-                    image={card.image}
-                    alt=""
-                    sx={{ minHeight: { md: 300 }, maxHeight: { md: 300 } }}
-                  />
+                  <div
+                    style={{ height: 300, width: "auto", position: "relative" }}
+                  >
+                    <Image src={card.image} alt="" fill={true} />
+                  </div>
                   <CardContent
                     sx={{
                       flexGrow: 1,
