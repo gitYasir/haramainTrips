@@ -1,4 +1,4 @@
-import css from "./NavBar.module.scss";
+import styles from "./NavBar.module.scss";
 import Link from "@mui/material/Link";
 import { useState } from "react";
 import Image from "next/image";
@@ -12,7 +12,11 @@ function NavBar() {
   return (
     <AppBar position="fixed">
       <Toolbar>
-        <Link href={"/"} style={{ display: "flex", flexDirection: "row" }}>
+        <Link
+          href="/"
+          sx={{ display: "flex", flexDirection: "row" }}
+          underline="none"
+        >
           <Image
             src={"/HaramainTripsLogoV1.0.png"}
             alt=""
@@ -24,10 +28,13 @@ function NavBar() {
             Haramain Trips
           </Typography>
         </Link>
-        <nav className={css.navBar}>
-          <div className={css.logoArea}></div>
+        <nav className={styles.navBar}>
           <div
-            className={state ? `${css.span} ${css.cross}` : css.span}
+            className={
+              state
+                ? `${styles.span} ${styles.cross} ${styles.actSpan}`
+                : styles.span
+            }
             onClick={toggleMenu}
           >
             <span></span>
@@ -35,7 +42,7 @@ function NavBar() {
             <span></span>
           </div>
           <div
-            className={state ? `${css.menu} ${css.active}` : css.menu}
+            className={state ? `${styles.menu} ${styles.active}` : styles.menu}
             onClick={toggleMenu}
           >
             <ul>

@@ -7,111 +7,116 @@
 .navBar {
   @include disFlex;
   z-index: 2;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: fixed;
   background-color: white;
   color: white;
-  width: 100%;
+  width: 71%;
+  margin-left: 227px;
   background-color: transparent;
-  // margin: -43px;
-
-  // @media (max-width: 790px) {
-  //   margin: -23px;
-  // }
-
-  .logoArea {
-    position: relative;
-    margin: 10px;
-    width: 100px;
-    height: 100px;
-    .myLogo {
-      border-radius: 50%;
-    }
+  @media (max-width: 770px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 142px;
+    padding-right: 35px;
+    width: 100%;
+    margin-left: 0;
   }
   .span {
     position: absolute;
-    top: 2rem;
+    top: 3rem;
     right: 1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 21px;
-    transition: all 0.5s ease-in-out;
+    color: white;
+    @media (max-width: 770px) {
+      display: flex;
+      margin: 10px 20px 0 0;
+    }
     cursor: pointer;
     span {
       height: 3px;
       width: 100%;
-      background-color: black;
+      background-color: white;
       border-radius: 10px;
+    }
+  }
+  .actSpan {
+    top: 7rem;
+  }
+  .cross {
+    @media (max-width: 770px) {
+      transform: rotate(180deg);
+      top: 9rem;
+    }
+    span:nth-child(1) {
+      @media (max-width: 770px) {
+        transform: rotate(45deg) translate(6px, 4px);
+        color: white;
+      }
+    }
+    span:nth-child(2) {
+      @media (max-width: 770px) {
+        opacity: 0;
+      }
+    }
+    span:nth-child(3) {
+      @media (max-width: 770px) {
+        transform: rotate(-45deg) translate(8px, -7px);
+      }
     }
   }
   .menu {
     height: 100%;
+    @media (max-width: 770px) {
+      display: none;
+      width: 100%;
+      margin-top: 56px;
+    }
     ul {
       @include disFlex;
       margin: 0;
       padding-right: 50px;
+      @media (max-width: 770px) {
+        width: 100%;
+        flex-direction: column;
+      }
       li {
         list-style: none;
         font-size: 20px;
+        @media (max-width: 770px) {
+          text-align: center;
+          width: 100%;
+          transition-delay: 0.2s;
+        }
         a {
           display: block;
           text-decoration: none;
           color: white;
           padding: 1rem;
           border-radius: 5%;
+          @media (max-width: 770px) {
+            padding: 0.5rem 1rem;
+          }
           &:hover {
             background-color: rgb(74, 190, 237);
             color: gray;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 770px) {
-  .navBar {
-    flex-direction: column;
-    align-items: flex-start;
-    .span {
-      display: flex;
-      margin: 10px 20px 0 0;
-    }
-  }
-  .menu {
-    display: none;
-    width: 100%;
-    ul {
-      width: 100%;
-      flex-direction: column;
-      li {
-        text-align: center;
-        width: 100%;
-        transition-delay: 0.2s;
-        a {
-          padding: 0.5rem 1rem;
-          &:hover {
-            border-radius: 0;
+            @media (max-width: 770px) {
+              padding: 0.5rem 1rem;
+            }
           }
         }
       }
     }
   }
   .active {
-    display: flex;
-  }
-  .cross {
-    transform: rotate(180deg);
-    span:nth-child(1) {
-      transform: rotate(45deg) translate(6px, 4px);
-    }
-    span:nth-child(2) {
-      opacity: 0;
-    }
-    span:nth-child(3) {
-      transform: rotate(-45deg) translate(8px, -7px);
+    @media (max-width: 770px) {
+      background-color: #1976d2;
+      display: flex;
+      top: 7rem;
     }
   }
 }
