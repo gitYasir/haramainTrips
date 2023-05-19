@@ -1,5 +1,7 @@
 import Head from "next/head";
 import NavBar from "../../Components/NavBar/NavBar";
+import Packages from "../../Components/Packages/Packages";
+import Subscribe from "../../Components/Subscribe/Subscribe";
 
 function packages() {
   return (
@@ -11,6 +13,8 @@ function packages() {
         <link rel="icon" href="/HaramainTripsLogoV1.png" />
       </Head>
       <NavBar />
+      <Packages />
+      <Subscribe />
     </>
   );
 }

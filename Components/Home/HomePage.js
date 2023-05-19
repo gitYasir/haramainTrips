@@ -14,6 +14,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import cards from "../../Data/data";
 import NavBar from "../NavBar/NavBar";
 import Image from "next/image";
+import { Link } from "@mui/material";
 
 const theme = createTheme();
 
@@ -72,8 +73,12 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Packages</Button>
-              <Button variant="outlined">Subscribe</Button>
+              <Link color={"inherit"} href="/packages">
+                <Button variant="contained">Packages</Button>
+              </Link>
+              <Link color={"inherit"} href="#Subscribe">
+                <Button variant="outlined">Subscribe</Button>
+              </Link>
             </Stack>
           </Container>
         </Box>
@@ -113,7 +118,9 @@ export default function Album() {
                       maxHeight: { md: 50 },
                     }}
                   >
-                    <Button size="small">Packages</Button>
+                    <Link color={"inherit"} href="/packages">
+                      <Button size="small">Packages</Button>
+                    </Link>
                   </CardActions>
                 </Card>
               </Grid>
