@@ -1,5 +1,6 @@
 import Head from "next/head";
 import NavBar from "../../Components/NavBar/NavBar";
+import About from "../../Components/About/About";
 
 function about() {
   return (
@@ -11,6 +12,7 @@ function about() {
         <link rel="icon" href="/HaramainTripsLogoV1.png" />
       </Head>
       <NavBar />
+      <About />
     </>
   );
 }

@@ -2,12 +2,10 @@ import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -24,15 +22,24 @@ export default function Album() {
       <CssBaseline />
       <NavBar />
       <main>
-        {/* Hero unit */}
         <Box
+          minHeight={"100vh"}
           sx={{
             bgcolor: "background.paper",
-            pt: 10,
+            pt: 13,
             pb: 6,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          <Container maxWidth="sm">
+          <Container
+            maxWidth="m"
+            sx={{
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <Typography
               component="h1"
               variant="h2"
@@ -54,19 +61,7 @@ export default function Album() {
               Let us take care of all the details, so you can focus on your
               spiritual journey
             </Typography>
-            <Typography
-              variant="h5"
-              align="center"
-              color="text.secondary"
-              paragraph
-            >
-              We believe that every aspect of your Umrah journey should be
-              stress-free and seamless, which is why we offer comprehensive
-              Umrah packages that take care of everything. From transportation
-              to accommodations to guided tours of holy sites, our packages are
-              designed to provide you with a memorable and hassle-free
-              experience.
-            </Typography>
+
             <Stack
               sx={{ pt: 4 }}
               direction="row"
@@ -95,7 +90,11 @@ export default function Album() {
                   }}
                 >
                   <div
-                    style={{ height: 300, width: "auto", position: "relative" }}
+                    style={{
+                      height: 300,
+                      width: 250,
+                      position: "relative",
+                    }}
                   >
                     <Image src={card.image} alt="" fill={true} />
                   </div>
